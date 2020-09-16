@@ -77,7 +77,6 @@ for i in range(N):
 print(key_list)
 # when using the found key_list it is clear that the second key must be changed from 29 to 31
 true_keys = [186, 31, 145, 178, 83, 205, 62] # true keys for first ciphered text
-message = "".join([chr(a ^ b) for (a,b) in zip(cipher,cycle(key_list))])
+true_keys2 = [17, 30, 163, 105, 43, 141, 238, 77, 239] # true keys for second ciphered text
+message = "".join([chr(a ^ b) for (a,b) in zip(cipher,cycle(true_keys))])
 print(message)
-
-
